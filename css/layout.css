@@ -394,6 +394,10 @@ ul#nav li.current a { color: #F06000; }
   0%   { width: 0px;  }
   100% { width: 50%;  }
 }
+@-webkit-keyframes VBA {
+  0%   { width: 0px;  }
+  100% { width: 40%;  }
+}
 @-webkit-keyframes css {
   0%   { width: 0px;  }
   100% { width: 90%;  }
