@@ -2,7 +2,8 @@
 
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<!-- <html class="no&#45;js" lang="en"> -->
+<html>
 <head>
 
 	<!--- Basic Page Needs
@@ -37,7 +38,7 @@
 	     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	     <link rel="icon" type="image/png" sizes=32x32" href="/favicon-32x32.png">
 	     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	     <link rel="manifest" href="/site.webmanifest">>
+	     <link rel="manifest" href="/site.webmanifest">
 
 
 </head>
@@ -77,11 +78,11 @@
 <!-- <p id="demo"></p> -->
 <!-- <p id="target"><p> -->
 	<script>
-// var typewriter = new Typewriter("#target");
+var typewriter = new Typewriter("#myName");
 		try {
 var tw = new Typewriter("#myName", {
 	tick: 100,
-	delay: 1000,
+	delay: 700,
 	sound: { enabled: true },
 	cursor: { blink: true },
 });
@@ -94,6 +95,16 @@ document.getElementById("myName").innerHTML = "Jeremiah Smith.";
 
 
 <h3 id="bio"><br>I'm a <span>software developer</span> and  <span>data scientist</span> with a passion for creating intelligent systems that complement and enhance the lives of human Beings. <a class="smoothscroll" href="#about">Start scrolling</a> to learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
+<h3 id="bio"></h3>
+	<script>
+			// var tw2 = new Typewriter('#bio', {
+			// 	tick: 100,
+			// 	delay: 1000,
+			// 	sound: { enabled: true },
+			// 	cursor: {blink: true },
+			// });
+			// tw2.type("<br>I'm a <span>software developer</span> and <span>data scientist</span> with a passion for creating intelligent systems that complement and enhance the lives of human Beings. <a class=&quotsmoothscroll&quot href=&quot#about&quot>Start scrolling</a> to learn more <a class=&quotsmoothscroll&quot href=&quot#about&quot>about me</a>.");
+		</script>
 				 <hr />
 				 <ul class="social">
 					 <li><a href="https://github.com/psygypsie"><i class="fa fa-github"></i></a></li>
