@@ -77,6 +77,7 @@
 <!-- <p id="target"><p> -->
 	<script>
 // var typewriter = new Typewriter("#target");
+		try {
 var tw = new Typewriter("#myName", {
 	tick: 100,
 	delay: 1000,
@@ -84,6 +85,11 @@ var tw = new Typewriter("#myName", {
 	cursor: { blink: true },
 });
 tw.type("Jeremiah Smith.");
+}
+catch {
+	//not working yet...
+document.getElementById("myName").innerHTML = "Jeremiah Smith.";
+}
 </script>
 
 
