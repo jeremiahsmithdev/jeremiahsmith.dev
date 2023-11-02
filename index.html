@@ -83,20 +83,19 @@ var typewriter = new Typewriter("#myName");
 		try {
 var tw = new Typewriter("#myName", {
 	tick: 100,
-	delay: 700,
+	delay: 300,
 	sound: { enabled: true },
 	cursor: { blink: true },
 });
 tw.type("Jeremiah Smith.");
 }
 catch {
-document.getElementById("myName").innerHTML = "Jeremiah Smith.";
+document.getElementById("myName").innerHTML = "";
 }
 </script>
 
 
-<h3 id="bio"><br>I'm a <span>software developer</span> and  <span>data scientist</span> with a passion for creating intelligent systems that complement and enhance the lives of human Beings. <a class="smoothscroll" href="#about">Start scrolling</a> to learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
-<h3 id="bio"></h3>
+<h3 id="bio" class="hidden"><br>I'm a <span>software developer</span> and  <span>data scientist</span> with a passion for creating intelligent systems that complement and enhance the lives of human Beings. <a class="smoothscroll" href="#about">Start scrolling</a> to learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
 	<script>
 			// var tw2 = new Typewriter('#bio', {
 			// 	tick: 100,
@@ -108,7 +107,8 @@ document.getElementById("myName").innerHTML = "Jeremiah Smith.";
 		</script>
 				 <hr />
 				 <ul class="social">
-					 <li><a href="https://github.com/psygypsie"><i class="fa fa-github"></i></a></li>
+					 <li><a
+							 href="https://github.com/jeremiahsmithdev"><i class="fa fa-github"></i></a></li>
 					 <li><a
 							 href="https://linkedin.com/in/jeremiahsmithdev"><i class="fa fa-linkedin"></i></a></li>
 				 </ul>
@@ -130,7 +130,8 @@ document.getElementById("myName").innerHTML = "Jeremiah Smith.";
 
 			  <div class="three columns">
 
-				  <img class="profile-pic"  src="images/profilepic.jpg" alt="" />
+				  <img class="profile-pic"
+				  src="images/profilepic.png" alt="" />
 
               
               
@@ -356,36 +357,48 @@ include many global Investment, Retail and Commercial Banks around the world.
 
 		      <div class="three columns header-col">
 			      <h1><span>Skills</span></h1>
+			      <img src="images/profile2.png" alt="Skills Image"
+			      class=skill-image>
 		      </div>
 
 		      <div class="nine columns main-col">
 
 			      <p>
-			      My skills...
+			      Programming Lanuages
 			      </p>
-
-			      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="11637e75-6c74-4c4e-895b-3fab537f4608" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 			      <div class="bars">
 
 				      <ul class="skills">
 					      <li><span class="bar-expand photoshop"></span><em>Python</em></li>
-					      <li><span class="bar-expand illustrator"></span><em>Java</em></li>
-					      <li><span class="bar-expand wordpress"></span><em>SQL</em></li>
 					      <li><span class="bar-expand css"></span><em>C++</em></li>
+					      <li><span class="bar-expand wordpress"></span><em>SQL</em></li>
+					      <li><span class="bar-expand
+							      jquery"></span><em>Unix
+							      & Linux</em></li>
+					      <li><span class="bar-expand illustrator"></span><em>Java</em></li>
 					      <li><span class="bar-expand VBA"><span><em>VBA</em></li>
 					      <li><span class="bar-expand
 							       html5"></span><em>HTML5
 							       & Javascript</em></li>
-					      <li><span class="bar-expand jquery"></span><em>Unix & Vim</em></li>
 				      </ul>
 
 			      </div><!-- end skill-bars -->
 
+
+
+
 		      </div> <!-- main-col end -->
 
+	      <div class="badges">
+		      <div class="three columns header-col">
+			      <h1><span>Certificates</span></h1>
+		      </div>
+			      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="11637e75-6c74-4c4e-895b-3fab537f4608" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+	      </div>
+
 		      <h1><span>Hobbies</h1>
-		      <p>
+		      <p class=hobbies-text>
 		      Wondering what I do outside of work? A career in
 		      technology doesn't just allow me to pursue what I love
 		      within an intellectual sphere. It also allows me to live
@@ -403,7 +416,8 @@ include many global Investment, Retail and Commercial Banks around the world.
 		      </p>
 
 		      <h3>Running</h3>
-		      <p>
+  <img src="images/flyers.png" alt="" class="flyers"/>
+		      <p class=running-text>
 		      I enjoy medium to long distance running both for leisure
 		      and as a competitive sport. Starting my morning with a
 		      run is a great way to invigorate the body and mind to get the
@@ -414,21 +428,35 @@ include many global Investment, Retail and Commercial Banks around the world.
 		      most enjoyable (and addictive)
 		      habits.
 		      </p>
-<a style="display:inline-block;background-color:#FC5200;color:#fff;padding:5px 10px 5px 30px;font-size:11px;font-family:Helvetica, Arial, sans-serif;white-space:nowrap;text-decoration:none;background-repeat:no-repeat;background-position:10px center;border-radius:3px;background-image:url('http://badges.strava.com/logo-strava-echelon.png')" href='http://strava.com/athletes/87746971' target="_clean">
-  Follow me on
-  <img src='http://badges.strava.com/logo-strava.png' alt='Strava' style='margin-left:2px;vertical-align:text-bottom' height=13 width=51 />
+		      <!-- Add the Strava button above the image -->
+<a style="display: inline-block; background-color: #FC5200; color: #fff;
+	padding: 5px 10px 5px 30px; font-size: 11px; font-family: Helvetica,
+	Arial, sans-serif; white-space: nowrap; text-decoration: none;
+	background-repeat: no-repeat; background-position: 10px center;
+	border-radius: 3px; background-image:
+	url('http://badges.strava.com/logo-strava-echelon.png');"
+	href='http://strava.com/athletes/87746971' target="_clean" class="strava">
+  Follow me on Strava
 </a>
+
+<!-- Add footer text to the marathon image -->
+<div style="text-align: center;">
+  <img src="images/sydney-marathon.png" alt="" class="sydney-marathon"/>
+  <p>At the finish of the Sydney Marathon running for the Newcastle Flyers
+  Running Club</p>
+</div>
+
 <br>
 <br>
-		      <h3>Soccer</h3>
-		      <p>
-		      I'm currently enjoying my first season of soccer in five
-		      years. I'm playing as a forward and enjoying this very
-		      much as I've had the confidence to score a few goals. My
-		      renewed passion in soccer also inspired me to build a
-		      seven-a-side soccer pitch on the family property for
-		      casual games.
-		      </p>
+		      <!-- <h3>Soccer</h3> -->
+		      <!-- <p> -->
+		      <!-- I'm currently enjoying my first season of soccer in five -->
+		      <!-- years. I'm playing as a forward and enjoying this very -->
+		      <!-- much as I've had the confidence to score a few goals. My -->
+		      <!-- renewed passion in soccer also inspired me to build a -->
+		      <!-- seven-a-side soccer pitch on the family property for -->
+		      <!-- casual games. -->
+		      <!-- </p> -->
 
 		      <h3>Meditation</h3>
 		      <p>
@@ -463,29 +491,29 @@ include many global Investment, Retail and Commercial Banks around the world.
 
 		</p> -->
 
-		<h3>Travel</h3>
-		<p>
-		It is my dream to travel the world as a <b>digital
-			nomad</b> indefinitely. I will not take for
-		granted the opportunity in this industry to both work
-		remotely and to take up temporary contracts anywhere in
-		the world. This is becoming even more easy than before
-		with the introduction of 'ditigal nomad visas' by some
-		countries looking to attract digital talent to their
-		economies.
-		It is a great opportunity of this industry to easily be able to
-		travel,
-		meet, and network with other industry experts around the world.
-		This provides the opportunity to develop an informed view on
-		the global state of technology.
-		<br>
-
-		In the below image you can see my self-built mobile
-		office. I've purpose built this space for work and study
-		as it allows me to be productive from anywhere and away
-		from distractions.
-		</p>
-		<img src="images/mobileoffice.jpg">
+		<!-- <h3>Travel</h3> -->
+		<!-- <p> -->
+		<!-- It is my dream to travel the world as a <b>digital -->
+		<!-- 	nomad</b> indefinitely. I will not take for -->
+		<!-- granted the opportunity in this industry to both work -->
+		<!-- remotely and to take up temporary contracts anywhere in -->
+		<!-- the world. This is becoming even more easy than before -->
+		<!-- with the introduction of 'ditigal nomad visas' by some -->
+		<!-- countries looking to attract digital talent to their -->
+		<!-- economies. -->
+		<!-- It is a great opportunity of this industry to easily be able to -->
+		<!-- travel, -->
+		<!-- meet, and network with other industry experts around the world. -->
+		<!-- This provides the opportunity to develop an informed view on -->
+		<!-- the global state of technology. -->
+		<!-- <br> -->
+                <!--  -->
+		<!-- In the below image you can see my self-built mobile -->
+		<!-- office. I've purpose built this space for work and study -->
+		<!-- as it allows me to be productive from anywhere and away -->
+		<!-- from distractions. -->
+		<!-- </p> -->
+		<!-- <img src="images/mobileoffice.jpg"> -->
 		<!-- width="1000" height="1000"> -->
 		<!-- <h3>Psytrance</h3>
 	  <p>

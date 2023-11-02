@@ -56,17 +56,59 @@ header .banner {
    padding-bottom: 30px;
    text-align: center;
 }
-
-header .banner-text { width: 100%; }
-header .banner-text h1 {
+header .responsive-headline {
+    font-size: 90px;
    font:90/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
-
-
 }
+
+
+header .banner-text {
+width: 100%;
+}
+/* header .banner-text h1 { */
+/*    font:90/1.1em 'opensans-bold', sans-serif; */
+/*    color: #fff; */
+/*    letter-spacing: -2px; */
+/*    margin: 0 auto 18px auto; */
+/*    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8); */
+/* } */
+.hidden {
+    opacity: 0;
+    transition: opacity 1s ease; /* Add a transition for a smooth fade effect */
+    animation: fade-in 1s 2s forwards; /* Delay the animation for 3 seconds (adjust as needed) */
+}
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.social {
+  width:100%;
+  overflow:hidden;
+  animation: slide-left 1s 2s forwards; /* 5s animation time, 2s delay, forwards means keep the to settings */
+  opacity: 0;
+      }
+
+      @keyframes slide-left {
+        from {
+    margin-left: 100%;
+        width: 300%; 
+	  }
+
+    to {
+        margin-left: 0%;
+	    width: 100%;
+	    opacity: 1;
+	      }
+      }
+
+
+
 
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
@@ -74,7 +116,6 @@ header .banner-text h3 {
    margin: 0 auto;
    width: 70%;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
-
 }
 header .banner-text h3 span,
 header .banner-text h3 a {
@@ -213,9 +254,9 @@ ul#nav li.current a { color: #F06000; }
 }
 #about .profile-pic {
    position: relative;
-   width: 120px;
-   height: 120px;
-   border-radius: 100%;
+   width: 190px;
+   height: auto;
+   border-radius: 15px;
 }
 #about .contact-details { width: 41.66667%; }
 #about .download {
@@ -290,6 +331,15 @@ ul#nav li.current a { color: #F06000; }
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
+
+.skill-image {
+   position: relative;
+   width: 190px;
+   height: auto;
+   border-radius: 15px;
+   top: 20px;
+}
+
 
 .bars {
 	width: 95%;
@@ -423,6 +473,26 @@ ul#nav li.current a { color: #F06000; }
 @-webkit-keyframes jquery {
   0%   { width: 0px;  }
   100% { width: 50%;  }
+}
+/* Hobbies */
+.flyers{
+   position: relative;
+   float: left;
+   width: 120px;
+   height: auto;
+   border-radius: 15px;
+}
+.running-text{
+	margin-left: 140px;
+}
+.sydney-marathon{
+   position: relative;
+   width: 190px;
+   height: auto;
+   border-radius: 15px;
+}
+.strava{
+	float: left;
 }
 
 /* ------------------------------------------------------------------ */
