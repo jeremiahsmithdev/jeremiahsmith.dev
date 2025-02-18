@@ -146,12 +146,17 @@ document.getElementById("myName").innerHTML = "";
               
 
 				  <p>
-				  2020 Computer Science graduate. Currently
-				  looking for work in the form of an internship, traineeship, work
-				  experience or junior software engineering position. Aiming towards a
-				  career in the areas of data science and machine learning. Looking to
-				  build the skillset to follow this path and eventually begin my own
-				  business.  A keen learner with a high attention to detail.
+				  Software Developer with a Bachelor of Computer
+				  Science and three years industry experience in
+				  roles ranging from database development for a
+				  small charity to backend applicaitons
+				  development in a highly corporate environment.
+				  Primary skills include Python, C++ and Linux
+				  shell scripting. Currently working towards a
+				  career in Data Science and undertaking
+				  relevant study in the form of the <b>IBM Data
+					  Science Professional Certificate
+					  course</b>.
 				  </p>
 
 				  <div class="row">
@@ -160,8 +165,32 @@ document.getElementById("myName").innerHTML = "";
 
 						  <h2>Contact Details</h2>
 						  <p class="address">
-						  <span><b>jeremiah@jeremiahsmith.dev</b></span><br>
-						  <span>(+61) 0478 522 964</span><br>
+						  <!-- <span><b>jeremiah@jeremiahsmith.dev</b></span><br> -->
+						  <b><a style="color:
+								     inherit;
+								     hover:
+								     #007bff;"
+							href="mailto:jeremiah@jeremiahsmith.dev">jeremiah@jeremiahsmith.dev</a></b>
+  <button id="revealButton" class="button" style="padding: 6px 10px">Reveal Phone Number</button>
+  <p id="phoneNumber" style="display: none;"><a
+	  href="tel:+6478522964">(+61) 0478 522 964</a></p>
+
+  <script>
+    document.getElementById("revealButton").addEventListener("click", function() {
+      // var messageElement = document.getElementById("message");
+      var buttonElement = document.getElementById("revealButton");
+      var phoneNumberElement = document.getElementById("phoneNumber");
+
+      // Hide the message and button
+      // messageElement.style.display = "none";
+		      buttonElement.remove();
+
+      // Show the phone number
+      phoneNumberElement.style.display = "block";
+    });
+  </script>
+
+						  <!-- <span>(+61) 0478 522 964</span><br> -->
 						  </p>
 
 					  </div>
@@ -394,7 +423,7 @@ include many global Investment, Retail and Commercial Banks around the world.
 
 	      <div class="badges">
 		      <div class="three columns header-col">
-			      <h1><span>Certificates</span></h1>
+			      <h1><span>Certifications</span></h1>
 		      </div>
 			      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="11637e75-6c74-4c4e-895b-3fab537f4608" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 	      </div>
@@ -752,12 +781,11 @@ include many global Investment, Retail and Commercial Banks around the world.
 	     ================================================== -->
 	     <section id="contact">
 
+		     <!-- <aside class="four columns footer-widgets center"> -->
 
-
-
-			     <aside class="four columns footer-widgets">
-
-				     <div class="widget widget_contact" style="text-align:center">
+				     <div class="widget widget_contact
+					  contact-section"
+					     style="text-align:center;">
 
 					     <h4>Contact</h4>
 					     <p class="address">
@@ -765,14 +793,26 @@ include many global Investment, Retail and Commercial Banks around the world.
 						     <b>jeremiah@jeremiahsmith.dev</b></span>
 					     <br>
 					     <span>Phone: (+61) 0478 522 964</span>
+					     <br>
+
+
 
 					     </p>
 
 				     </div>
 
-			     </aside>
+			     <!-- </aside> -->
 
 		     </div>
+			      <div class="badge-base LI-profile-badge
+				   linkedin-badge"
+				      data-locale="en_US" data-size="medium"
+				      data-theme="dark" data-type="VERTICAL"
+			      data-vanity="jeremiahsmithdev"
+			      data-version="v1"><a class="badge-base__link
+		      LI-simple-link"
+		      href="https://au.linkedin.com/in/jeremiahsmithdev?trk=profile-badge"
+      style="text-align:center"></a></div>
 
 	     </section> <!-- Contact Section End-->
 
@@ -786,12 +826,14 @@ include many global Investment, Retail and Commercial Banks around the world.
 			      <div class="twelve columns">
 
 				      <ul class="social-links">
-					      <li><a href="https://github.com/psygypsie"><i class="fa fa-github"></i></a>
+					      <li><a
+							      href="https://github.com/jeremiahsmithdev"><i class="fa fa-github"></i></a>
 						      <li><a
 								      href="https://linkedin.com/in/jeremiahsmithdev"><i class="fa fa-linkedin"></i></a></li>
 				      </ul>
 
 			      </div>
+
 
 			      <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
 
@@ -815,3 +857,24 @@ include many global Investment, Retail and Commercial Banks around the world.
 </html>
 
 <script src='http://127.0.0.1:9001/js/socket.js'></script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<!-- <script> -->
+<!--   document.getElementById("revealButton").addEventListener("click", function() { -->
+<!--     var phoneNumberElement = document.getElementById("phoneNumber"); -->
+<!--     phoneNumberElement.style.display = "block"; -->
+<!--   }); -->
+<!-- </script> -->
+<script>
+  document.getElementById("revealButton").addEventListener("click", function() {
+      var messageElement = document.getElementById("message");
+      var buttonElement = document.getElementById("revealButton");
+      var phoneNumberElement = document.getElementById("phoneNumber");
+
+      // Hide the message and button
+      messageElement.style.display = "none";
+      buttonElement.style.display = "none";
+
+      // Show the phone number
+      phoneNumberElement.style.display = "block";
+    });
+</script>
