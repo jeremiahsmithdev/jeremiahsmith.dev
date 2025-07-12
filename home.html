@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Jeremiah Smith - Software Developer | jeremiahsmith.dev</title>
+   <meta name="description" content="Software developer and data scientist passionate about creating intelligent systems">
+   <meta name="author" content="Jeremiah Smith">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+   <!-- Modern CSS -->
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/media-queries.css">
+   <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/modern-home.css">
+
+   <!-- Modern Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+   <!-- Scripts -->
+   <script src="js/modernizr.js"></script>
+
+   <!-- Favicons -->
+   <link rel="shortcut icon" href="android-chrome-512x512.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+   <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+   <!-- Modern Header -->
+   <header id="home" class="modern-header">
+      <!-- Modern Navigation -->
+      <nav id="nav-wrap" class="modern-nav">
+         <div class="nav-container">
+            <div class="nav-brand">
+               <a href="#home" class="brand-link">JS</a>
+            </div>
+            
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+            
+            <ul id="nav" class="nav modern-nav-list">
+               <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+               <li><a class="smoothscroll" href="#about">About</a></li>
+               <li><a class="smoothscroll" href="#resume">Resume</a></li>
+               <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+               <li><a href="blog/index.html">Blog</a></li>
+               <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            </ul>
+         </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <div class="hero-section">
+         <div class="terminal-container">
+            <div class="terminal-header">
+               <div class="terminal-controls">
+                  <span class="control close"></span>
+                  <span class="control minimize"></span>
+                  <span class="control maximize"></span>
+               </div>
+               <div class="terminal-title">jeremiah@portfolio:~$</div>
+            </div>
+            <div class="terminal-body">
+               <div class="terminal-line">
+                  <span class="prompt">$</span>
+                  <span class="command">whoami</span>
+               </div>
+               <div class="terminal-line">
+                  <span id="typed-name" class="terminal-output"></span>
+                  <span id="cursor" class="terminal-cursor">█</span>
+               </div>
+               <div class="terminal-line" id="bio-line" style="display: none;">
+                  <span class="prompt">$</span>
+                  <span class="command">cat about.txt</span>
+               </div>
+               <div class="terminal-line bio-output" id="bio-output" style="display: none;">
+                  <span id="typed-bio"></span>
+               </div>
+            </div>
+         </div>
+
+         <div class="hero-content">
+            <div class="hero-subtitle">
+               <span class="subtitle-line">Software Developer</span>
+               <span class="subtitle-separator">•</span>
+               <span class="subtitle-line">Data Scientist</span>
+               <span class="subtitle-separator">•</span>
+               <span class="subtitle-line">Problem Solver</span>
+            </div>
+            
+            <p class="hero-description">
+               I create intelligent systems that complement and enhance human capabilities.
+               Passionate about building technology that makes a difference.
+            </p>
+
+            <div class="hero-actions">
+               <a class="smoothscroll cta-primary" href="#about">Learn More</a>
+               <a class="smoothscroll cta-secondary" href="#contact">Get In Touch</a>
+            </div>
+
+            <div class="social-links">
+               <a href="https://github.com/jeremiahsmithdev" target="_blank" class="social-link" aria-label="GitHub">
+                  <i class="fa fa-github"></i>
+               </a>
+               <a href="https://linkedin.com/in/jeremiahsmithdev" target="_blank" class="social-link" aria-label="LinkedIn">
+                  <i class="fa fa-linkedin"></i>
+               </a>
+               <a href="https://www.strava.com/athletes/57565397" target="_blank" class="social-link" aria-label="Strava">
+                  <i class="fa fa-bicycle"></i>
+               </a>
+            </div>
+         </div>
+
+         <div class="scroll-indicator">
+            <a class="smoothscroll" href="#about">
+               <div class="scroll-arrow">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               <span class="scroll-text">Scroll to explore</span>
+            </a>
+         </div>
+      </div>
+
+      <!-- Animated Background -->
+      <div class="animated-bg">
+         <div class="bg-grid"></div>
+         <div class="floating-elements">
+            <div class="float-element" style="--delay: 0s;">{ }</div>
+            <div class="float-element" style="--delay: 2s;">< /></div>
+            <div class="float-element" style="--delay: 4s;">( )</div>
+            <div class="float-element" style="--delay: 6s;">[ ]</div>
+            <div class="float-element" style="--delay: 8s;">= ></div>
+         </div>
+      </div>
+   </header>
+
+   <!-- About Section (keeping original structure) -->
+   <section id="about">
+      <div class="row">
+         <div class="three columns">
+            <img class="profile-pic" src="images/profilepic.png" alt="Jeremiah Smith" />
+         </div>
+
+         <div class="nine columns main-col">
+            <h2>About Me</h2>
+            <p>
+               I'm a passionate software developer and data scientist with expertise in creating 
+               intelligent systems that solve real-world problems. My journey in technology has 
+               led me through various domains, from web development to machine learning, always 
+               with a focus on building solutions that enhance human capabilities.
+            </p>
+            <p>
+               With experience in both startup environments and enterprise settings, I bring a 
+               unique perspective to software development that balances innovation with practicality. 
+               I'm particularly interested in the intersection of AI and web technologies, exploring 
+               how we can create more intuitive and intelligent user experiences.
+            </p>
+
+            <div class="row">
+               <div class="columns contact-details">
+                  <h2>Contact Details</h2>
+                  <p class="address">
+                     <span>Jeremiah Smith</span><br>
+                     <span>Software Developer & Data Scientist</span><br>
+                     <span id="phone-number" class="phone-hidden">
+                        <button id="show-phone" class="phone-reveal-btn">
+                           Click to reveal phone number
+                        </button>
+                        <span id="phone-display" class="phone-display" style="display: none;">
+                           (555) 123-4567
+                        </span>
+                     </span><br>
+                     <span>jeremiah@jeremiahsmith.dev</span>
+                  </p>
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Keep the rest of the original sections... -->
+   <!-- This is just the modernized header/hero section -->
+
+   <!-- Terminal Typing Animation Script -->
+   <script src="js/terminal-typing.js"></script>
+   
+   <!-- Original Scripts -->
+   <script src="js/jquery-1.10.2.min.js"></script>
+   <script src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/jquery.flexslider.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/jquery.fittext.js"></script>
+   <script src="js/magnific-popup.js"></script>
+   <script src="js/init.js"></script>
+   <script src="js/modern-home.js"></script>
+</body>
+</html>
