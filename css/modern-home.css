@@ -36,11 +36,25 @@ body {
 /* ===== MODERN HEADER STYLES ===== */
 .modern-header {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+    background: #161415 url(../images/header-background.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+}
+
+.modern-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 17, 23, 0.3);
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Modern Navigation */
@@ -147,7 +161,7 @@ body {
     padding: 2rem;
     text-align: center;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* ===== TERMINAL STYLES ===== */
@@ -427,8 +441,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
-    opacity: 0.1;
+    z-index: 2;
+    opacity: 0.05;
 }
 
 .bg-grid {
