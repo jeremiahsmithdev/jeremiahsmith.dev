@@ -96,7 +96,7 @@ class TerminalTyper {
             bioOutput.style.animation = 'fadeInUp 0.3s ease-out';
             
             // Type bio text
-            this.typeBio(typedBio, 'Software Developer & Data Scientist');
+            this.typeBio(typedBio, 'Freelance Full-Stack Developer');
         }, 800);
     }
     
