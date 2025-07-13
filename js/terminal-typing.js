@@ -240,17 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Note: Smooth scrolling is handled by the original init.js file
     // No need to initialize SmoothScroll to avoid conflicts
     
-    // Phone number reveal
-    const showPhoneBtn = document.getElementById('show-phone');
-    const phoneDisplay = document.getElementById('phone-display');
-    
-    if (showPhoneBtn && phoneDisplay) {
-        showPhoneBtn.addEventListener('click', () => {
-            showPhoneBtn.style.display = 'none';
-            phoneDisplay.style.display = 'inline';
-            phoneDisplay.style.animation = 'fadeIn 0.3s ease-out';
-        });
-    }
+    // Phone number reveal removed as per user request
 });
 
 // Clean up on page unload
