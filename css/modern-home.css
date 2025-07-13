@@ -455,6 +455,37 @@ body {
     opacity: 0.05;
 }
 
+/* ===== DEATH STAR BACKGROUND ===== */
+.death-star-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+    background: url('../images/death-star.png') no-repeat center center;
+    background-size: 400px 400px;
+    transition: opacity 2s ease-in-out;
+}
+
+.death-star-revealed {
+    opacity: 0.8 !important;
+}
+
+/* Terminal exit animation */
+.terminal-exit-animation {
+    transform: scale(0.95) perspective(1000px) rotateX(10deg) !important;
+    opacity: 0.8 !important;
+    transition: all 1s ease-in-out !important;
+}
+
+.terminal-hiding {
+    transform: scale(0.1) perspective(1000px) rotateX(90deg) !important;
+    opacity: 0 !important;
+    transition: all 1.2s ease-in-out !important;
+}
+
 .bg-grid {
     position: absolute;
     top: 0;
