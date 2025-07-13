@@ -326,12 +326,13 @@ body {
 
 .cta-primary {
     background: var(--primary-color);
-    color: var(--white);
+    color: #ffffff !important;
     box-shadow: var(--shadow-medium);
 }
 
 .cta-primary:hover {
     background: var(--secondary-color);
+    color: #ffffff !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(17, 171, 176, 0.3);
 }
@@ -660,6 +661,53 @@ body {
     }
 }
 
+/* ===== ABOUT SECTION ENHANCEMENTS ===== */
+#about {
+    position: relative;
+}
+
+#about h2 {
+    font-size: 2.5rem !important;
+    color: #fff !important;
+    margin-bottom: 2rem !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+#about p {
+    color: #E8E8E8 !important;
+    font-size: 1.4rem !important;
+    line-height: 1.8 !important;
+    margin-bottom: 2rem !important;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+#about h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+#about .main-col {
+    position: relative;
+    z-index: 2;
+}
+
+/* Add subtle animation */
+#about .main-col {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ===== REDUCED MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -675,5 +723,30 @@ body {
     .bg-grid,
     .float-element {
         animation: none;
+    }
+    
+    #about .main-col {
+        animation: none;
+    }
+}
+
+/* ===== RESPONSIVE ABOUT TEXT ===== */
+@media only screen and (max-width: 768px) {
+    #about p {
+        font-size: 1.3rem !important;
+    }
+    
+    #about h2 {
+        font-size: 2.2rem !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #about p {
+        font-size: 1.2rem !important;
+    }
+    
+    #about h2 {
+        font-size: 2rem !important;
     }
 }
