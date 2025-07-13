@@ -57,7 +57,7 @@
 
       <!-- Hero Section -->
       <div class="hero-section contact-hero">
-         <form id="terminal-contact-form" method="post" action="inc/sendEmail.php">
+         <form id="terminal-contact-form" method="POST" action="https://formspree.io/f/mzzvpbng">
          <div class="terminal-container contact-terminal">
             <div class="terminal-header">
                <div class="terminal-controls">
@@ -77,17 +77,17 @@
                </div>
                <div class="terminal-form-line">
                   <span class="terminal-output">From: </span>
-                  <input type="email" id="terminalEmail" name="contactEmail" placeholder="your@email.com" class="terminal-input" required>
+                  <input type="email" id="terminalEmail" name="email" placeholder="your@email.com" class="terminal-input" required>
                </div>
                <div class="terminal-form-line">
                   <span class="terminal-output">Subject: </span>
-                  <input type="text" id="terminalSubject" name="contactSubject" placeholder="Project Inquiry" class="terminal-input">
+                  <input type="text" id="terminalSubject" name="subject" placeholder="Project Inquiry" class="terminal-input">
                </div>
                <div class="terminal-form-line">
                   <span class="terminal-output">Message:</span>
                </div>
                <div class="terminal-message-area">
-                  <textarea id="terminalMessage" name="contactMessage" placeholder="Tell me about your project..." class="terminal-textarea" required></textarea>
+                  <textarea id="terminalMessage" name="message" placeholder="Tell me about your project..." class="terminal-textarea" required></textarea>
                </div>
                <div class="terminal-form-line">
                   <span class="prompt">$</span>

@@ -5,55 +5,24 @@
 
 $(document).ready(function() {
     
-    // Terminal contact form submission
+    // Terminal contact form submission - simple validation only
     $('#terminal-contact-form').on('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data from terminal inputs
-        const formData = {
-            contactName: 'Anonymous', // We'll extract from email or set as anonymous
-            contactEmail: $('#terminalEmail').val(),
-            contactSubject: $('#terminalSubject').val() || 'Contact Form Submission',
-            contactMessage: $('#terminalMessage').val()
-        };
-        
-        // Extract name from email if possible
-        if (formData.contactEmail) {
-            const emailName = formData.contactEmail.split('@')[0];
-            formData.contactName = emailName.replace(/[^a-zA-Z]/g, ' ').trim() || 'Anonymous';
-        }
+        // Get form data from terminal inputs for validation
+        const email = $('#terminalEmail').val();
+        const message = $('#terminalMessage').val();
         
         // Validate form
-        if (!formData.contactEmail || !formData.contactMessage) {
+        if (!email || !message) {
+            e.preventDefault();
             showMessage('warning', 'Please fill in email and message fields.');
-            return;
+            return false;
         }
         
-        // Disable send button and show loading state
+        // Show loading state
         $('.terminal-send-btn').prop('disabled', true).text('sending...');
         
-        // Submit form via AJAX
-        $.ajax({
-            type: 'POST',
-            url: 'inc/sendEmail.php',
-            data: formData,
-            success: function(response) {
-                $('.terminal-send-btn').prop('disabled', false).text('send');
-                
-                if (response === 'OK') {
-                    // Success
-                    showMessage('success', 'Message sent successfully!');
-                    $('#terminal-contact-form')[0].reset();
-                } else {
-                    // Error
-                    showMessage('warning', 'Something went wrong. Please try again.');
-                }
-            },
-            error: function() {
-                $('.terminal-send-btn').prop('disabled', false).text('send');
-                showMessage('warning', 'Unable to send message. Please try emailing directly.');
-            }
-        });
+        // Let the form submit naturally to Formspree
+        // Formspree will handle the redirect
     });
     
     // Show message function
@@ -74,6 +43,29 @@ $(document).ready(function() {
         setTimeout(function() {
             $('.message-box').fadeOut();
         }, 5000);
+    }
+    
+    // Add terminal success feedback
+    function addTerminalSuccess() {
+        const terminalBody = $('.terminal-body');
+        
+        // Add success line to terminal
+        const successLine = $('<div class="terminal-line terminal-success-line">' +
+            '<span class="terminal-output" style="color: var(--terminal-green);">✓ Message sent successfully!</span>' +
+            '</div>');
+        
+        // Insert before the send button line
+        $('.terminal-form-line').last().before(successLine);
+        
+        // Animate it in
+        successLine.hide().fadeIn();
+        
+        // Remove it after 3 seconds
+        setTimeout(() => {
+            successLine.fadeOut(() => {
+                successLine.remove();
+            });
+        }, 3000);
     }
     
     // Terminal input focus effects
