@@ -284,7 +284,7 @@ body {
 .subtitle-line {
     color: var(--terminal-green);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     letter-spacing: 0.5px;
 }
 
@@ -295,12 +295,13 @@ body {
 
 .hero-description {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.8;
     margin-bottom: 3rem;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 400;
 }
 
 .hero-actions {
@@ -595,7 +596,7 @@ body {
     }
     
     .hero-description {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin-bottom: 2rem;
     }
     
@@ -628,7 +629,7 @@ body {
     }
     
     .hero-description {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     .social-links {
