@@ -237,8 +237,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize scroll animations
     new ScrollReveal();
     
-    // Initialize smooth scrolling
-    new SmoothScroll();
+    // Note: Smooth scrolling is handled by the original init.js file
+    // No need to initialize SmoothScroll to avoid conflicts
     
     // Phone number reveal
     const showPhoneBtn = document.getElementById('show-phone');
