@@ -5,27 +5,32 @@
 
 $(document).ready(function() {
     
-    // Contact form submission
-    $('#contact-form').on('submit', function(e) {
+    // Terminal contact form submission
+    $('#terminal-contact-form').on('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
+        // Get form data from terminal inputs
         const formData = {
-            contactName: $('#contactName').val(),
-            contactEmail: $('#contactEmail').val(),
-            contactSubject: $('#contactSubject').val() || 'Contact Form Submission',
-            contactMessage: $('#contactMessage').val()
+            contactName: 'Anonymous', // We'll extract from email or set as anonymous
+            contactEmail: $('#terminalEmail').val(),
+            contactSubject: $('#terminalSubject').val() || 'Contact Form Submission',
+            contactMessage: $('#terminalMessage').val()
         };
         
+        // Extract name from email if possible
+        if (formData.contactEmail) {
+            const emailName = formData.contactEmail.split('@')[0];
+            formData.contactName = emailName.replace(/[^a-zA-Z]/g, ' ').trim() || 'Anonymous';
+        }
+        
         // Validate form
-        if (!formData.contactName || !formData.contactEmail || !formData.contactMessage) {
-            showMessage('warning', 'Please fill in all required fields.');
+        if (!formData.contactEmail || !formData.contactMessage) {
+            showMessage('warning', 'Please fill in email and message fields.');
             return;
         }
         
-        // Show loader
-        $('#form-loader').fadeIn();
-        $('.submit-btn').prop('disabled', true);
+        // Disable send button and show loading state
+        $('.terminal-send-btn').prop('disabled', true).text('sending...');
         
         // Submit form via AJAX
         $.ajax({
@@ -33,21 +38,19 @@ $(document).ready(function() {
             url: 'inc/sendEmail.php',
             data: formData,
             success: function(response) {
-                $('#form-loader').fadeOut();
-                $('.submit-btn').prop('disabled', false);
+                $('.terminal-send-btn').prop('disabled', false).text('send');
                 
                 if (response === 'OK') {
                     // Success
-                    showMessage('success', 'Your message was sent successfully!');
-                    $('#contact-form')[0].reset();
+                    showMessage('success', 'Message sent successfully!');
+                    $('#terminal-contact-form')[0].reset();
                 } else {
                     // Error
                     showMessage('warning', 'Something went wrong. Please try again.');
                 }
             },
             error: function() {
-                $('#form-loader').fadeOut();
-                $('.submit-btn').prop('disabled', false);
+                $('.terminal-send-btn').prop('disabled', false).text('send');
                 showMessage('warning', 'Unable to send message. Please try emailing directly.');
             }
         });
@@ -73,13 +76,11 @@ $(document).ready(function() {
         }, 5000);
     }
     
-    // Input animation on focus
-    $('.form-field input, .form-field textarea').on('focus', function() {
-        $(this).parent().addClass('focused');
+    // Terminal input focus effects
+    $('.terminal-input, .terminal-textarea').on('focus', function() {
+        $(this).addClass('focused');
     }).on('blur', function() {
-        if (!$(this).val()) {
-            $(this).parent().removeClass('focused');
-        }
+        $(this).removeClass('focused');
     });
     
     // Terminal cursor animation

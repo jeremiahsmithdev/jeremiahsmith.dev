@@ -10,7 +10,7 @@
 }
 
 .contact-terminal {
-    max-width: 450px;
+    max-width: 600px;
     margin-bottom: 2rem;
 }
 
@@ -29,7 +29,9 @@
 }
 
 .terminal-cursor {
+    color: var(--terminal-green);
     animation: blink 1s infinite;
+    font-weight: bold;
 }
 
 @keyframes blink {
@@ -37,97 +39,93 @@
     51%, 100% { opacity: 0; }
 }
 
-/* Contact Section */
-#contact-section {
-    background: #fff;
-    padding: 80px 0;
-    min-height: 60vh;
-}
-
-.contact-form-container {
-    background: #f8f8f8;
-    padding: 3rem;
-    border-radius: 12px;
-    margin-bottom: 3rem;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-/* Form Styles */
-.form-field {
-    margin-bottom: 2rem;
-}
-
-.form-field label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #333;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.form-field .required {
-    color: var(--primary-color);
-}
-
-.form-field input,
-.form-field textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid #e1e1e1;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Inter', sans-serif;
-    transition: var(--transition-fast);
-    background: white;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(17, 171, 176, 0.1);
-}
-
-.form-field textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-/* Submit Button */
-.submit-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transition-medium);
-    display: inline-flex;
+/* Terminal Form Styles */
+.terminal-form-line {
+    margin-bottom: 1rem;
+    display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
 }
 
-.submit-btn:hover {
-    background: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(17, 171, 176, 0.3);
+.terminal-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px;
+    color: var(--white) !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.05rem;
+    outline: none;
+    flex: 1;
+    padding: 0.75rem;
+    caret-color: var(--terminal-green);
+    caret-shape: block;
 }
 
-.submit-btn i {
-    font-size: 1.1rem;
+.terminal-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-/* Form Loader */
-.form-loader {
-    display: none;
-    margin-left: 1rem;
-    color: var(--primary-color);
-    font-size: 1.2rem;
+.terminal-input:focus {
+    border-color: var(--terminal-green);
+    box-shadow: 0 0 0 2px rgba(74, 246, 38, 0.2);
 }
+
+.terminal-message-area {
+    margin: 1rem 0;
+}
+
+.terminal-textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--white);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    padding: 1rem;
+    min-height: 120px;
+    resize: vertical;
+    outline: none;
+    caret-color: var(--terminal-green);
+    caret-shape: block;
+}
+
+.terminal-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.terminal-textarea:focus {
+    border-color: var(--terminal-green);
+    box-shadow: 0 0 0 2px rgba(74, 246, 38, 0.2);
+}
+
+.terminal-send-btn {
+    background: transparent;
+    border: none;
+    color: var(--terminal-blue);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    margin-left: 0.5rem;
+}
+
+.terminal-send-btn:hover {
+    color: var(--terminal-green);
+    text-decoration: underline;
+}
+
+/* Message Container */
+.message-container {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 90%;
+    max-width: 500px;
+}
+
 
 /* Message Boxes */
 .message-box {
@@ -156,42 +154,6 @@
     border: 1px solid #c3e6cb;
 }
 
-/* Contact Info */
-.contact-info {
-    text-align: center;
-}
-
-.contact-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.info-item {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    color: #666;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.info-item i {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    width: 30px;
-}
-
-.info-item a {
-    color: #666;
-    text-decoration: none;
-    transition: var(--transition-fast);
-}
-
-.info-item a:hover {
-    color: var(--primary-color);
-}
 
 /* Strava Icon Footer */
 .strava-icon-footer {
@@ -203,7 +165,7 @@
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
     .contact-header {
-        min-height: 60vh;
+        min-height: 70vh;
     }
     
     .contact-title {
@@ -214,13 +176,18 @@
         font-size: 1.1rem;
     }
     
-    .contact-form-container {
-        padding: 2rem;
+    .contact-terminal {
+        max-width: 100%;
     }
     
-    .info-item {
+    .terminal-form-line {
         flex-direction: column;
-        gap: 0.5rem;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .terminal-input {
+        width: 100%;
     }
 }
 
@@ -231,18 +198,5 @@
     
     .contact-subtitle {
         font-size: 1rem;
-    }
-    
-    .contact-form-container {
-        padding: 1.5rem;
-    }
-    
-    .form-field label {
-        font-size: 0.9rem;
-    }
-    
-    .submit-btn {
-        width: 100%;
-        justify-content: center;
     }
 }

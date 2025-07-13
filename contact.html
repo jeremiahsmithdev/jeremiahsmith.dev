@@ -57,6 +57,7 @@
 
       <!-- Hero Section -->
       <div class="hero-section contact-hero">
+         <form id="terminal-contact-form" method="post" action="inc/sendEmail.php">
          <div class="terminal-container contact-terminal">
             <div class="terminal-header">
                <div class="terminal-controls">
@@ -74,11 +75,28 @@
                <div class="terminal-line">
                   <span class="terminal-output">To: jeremiah@jeremiahsmith.dev</span>
                </div>
-               <div class="terminal-line">
-                  <span class="terminal-output">Subject: <span class="terminal-cursor">_</span></span>
+               <div class="terminal-form-line">
+                  <span class="terminal-output">From: </span>
+                  <input type="email" id="terminalEmail" name="contactEmail" placeholder="your@email.com" class="terminal-input" required>
+               </div>
+               <div class="terminal-form-line">
+                  <span class="terminal-output">Subject: </span>
+                  <input type="text" id="terminalSubject" name="contactSubject" placeholder="Project Inquiry" class="terminal-input">
+               </div>
+               <div class="terminal-form-line">
+                  <span class="terminal-output">Message:</span>
+               </div>
+               <div class="terminal-message-area">
+                  <textarea id="terminalMessage" name="contactMessage" placeholder="Tell me about your project..." class="terminal-textarea" required></textarea>
+               </div>
+               <div class="terminal-form-line">
+                  <span class="prompt">$</span>
+                  <button type="submit" class="terminal-send-btn" form="terminal-contact-form">send</button>
+                  <span class="terminal-cursor">_</span>
                </div>
             </div>
          </div>
+         </form>
 
          <div class="hero-content">
             <h1 class="contact-title">Let's Connect</h1>
@@ -92,76 +110,18 @@
       </div>
    </header>
 
-   <!-- Contact Section -->
-   <section id="contact-section">
-      <div class="row">
-         <div class="eight columns offset-by-two">
-            <div class="contact-form-container">
-               <form id="contact-form" method="post" action="inc/sendEmail.php">
-                  <fieldset>
-                     <div class="form-field">
-                        <label for="contactName">Name <span class="required">*</span></label>
-                        <input type="text" placeholder="Your Name" value="" minlength="2" required="" id="contactName" name="contactName">
-                     </div>
-
-                     <div class="form-field">
-                        <label for="contactEmail">Email <span class="required">*</span></label>
-                        <input type="email" placeholder="your@email.com" value="" required="" id="contactEmail" name="contactEmail">
-                     </div>
-
-                     <div class="form-field">
-                        <label for="contactSubject">Subject</label>
-                        <input type="text" placeholder="Project Inquiry" value="" id="contactSubject" name="contactSubject">
-                     </div>
-
-                     <div class="form-field">
-                        <label for="contactMessage">Message <span class="required">*</span></label>
-                        <textarea cols="50" rows="10" placeholder="Tell me about your project..." id="contactMessage" name="contactMessage" required=""></textarea>
-                     </div>
-
-                     <div class="form-field">
-                        <button type="submit" class="submit-btn">
-                           <i class="fa fa-paper-plane"></i>
-                           Send Message
-                        </button>
-                        <span id="form-loader" class="form-loader">
-                           <i class="fa fa-spinner fa-spin"></i>
-                        </span>
-                     </div>
-                  </fieldset>
-               </form>
-
-               <!-- contact-warning -->
-               <div id="message-warning" class="message-box warning">
-                  <i class="fa fa-exclamation-triangle"></i>
-                  <span>Something went wrong. Please try again.</span>
-               </div>
-               
-               <!-- contact-success -->
-               <div id="message-success" class="message-box success">
-                  <i class="fa fa-check"></i>
-                  <span>Your message was sent successfully!</span>
-               </div>
-            </div>
-
-            <div class="contact-info">
-               <h3>Other Ways to Connect</h3>
-               <div class="info-item">
-                  <i class="fa fa-envelope"></i>
-                  <span>jeremiah@jeremiahsmith.dev</span>
-               </div>
-               <div class="info-item">
-                  <i class="fa fa-github"></i>
-                  <a href="https://github.com/jeremiahsmithdev" target="_blank">GitHub</a>
-               </div>
-               <div class="info-item">
-                  <i class="fa fa-linkedin"></i>
-                  <a href="https://linkedin.com/in/jeremiahsmithdev" target="_blank">LinkedIn</a>
-               </div>
-            </div>
-         </div>
+   <!-- Message boxes for terminal form -->
+   <div class="message-container">
+      <div id="message-warning" class="message-box warning">
+         <i class="fa fa-exclamation-triangle"></i>
+         <span>Something went wrong. Please try again.</span>
       </div>
-   </section>
+      
+      <div id="message-success" class="message-box success">
+         <i class="fa fa-check"></i>
+         <span>Your message was sent successfully!</span>
+      </div>
+   </div>
 
    <!-- Footer -->
    <footer>
