@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
    <meta charset="utf-8">
-   <title>Blog - Jeremiah Smith | Software Developer</title>
-   <meta name="description" content="Thoughts and insights on software development, technology, and career growth">
+   <title>Blog - Jeremiah Smith | Freelance Full-Stack Developer</title>
+   <meta name="description" content="Thoughts and insights on full-stack development, technology, and building great software">
    <meta name="author" content="Jeremiah Smith">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -11,7 +11,14 @@
    <link rel="stylesheet" href="../css/default.css">
    <link rel="stylesheet" href="../css/layout.css">
    <link rel="stylesheet" href="../css/media-queries.css">
-   <link rel="stylesheet" href="blog.css">
+   <link rel="stylesheet" href="../css/magnific-popup.css">
+   <link rel="stylesheet" href="../css/modern-home.css">
+   <link rel="stylesheet" href="blog-modern.css">
+
+   <!-- Modern Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
    <!-- Scripts -->
    <script src="../js/modernizr.js"></script>
@@ -24,80 +31,94 @@
 </head>
 
 <body>
-   <!-- Header -->
-   <header id="home">
-      <nav id="nav-wrap">
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-         
-         <ul id="nav" class="nav">
-            <li><a href="../index.html">Home</a></li>
-            <li class="current"><a href="#blog">Blog</a></li>
-         </ul>
+   <!-- Modern Header -->
+   <header id="blog-header" class="modern-header blog-header">
+      <!-- Modern Navigation -->
+      <nav id="nav-wrap" class="modern-nav">
+         <div class="nav-container">
+            <div class="nav-brand">
+               <a href="../home.html" class="brand-link">JS</a>
+            </div>
+            
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+            
+            <ul id="nav" class="nav modern-nav-list">
+               <li><a href="../home.html">Home</a></li>
+               <li><a href="../home.html#about">About</a></li>
+               <li class="current"><a href="#blog">Blog</a></li>
+               <li><a href="../contact.html">Contact</a></li>
+            </ul>
+         </div>
       </nav>
 
-      <div class="row banner">
-         <div class="banner-text">
-            <h1 class="responsive-headline">Blog</h1>
-            <h3>Thoughts on software development, technology, and career growth</h3>
-            <hr />
+      <!-- Hero Section -->
+      <div class="hero-section blog-hero">
+         <div class="terminal-container blog-terminal">
+            <div class="terminal-header">
+               <div class="terminal-controls">
+                  <span class="control close"></span>
+                  <span class="control minimize"></span>
+                  <span class="control maximize"></span>
+               </div>
+               <div class="terminal-title">jeremiah@blog:~$</div>
+            </div>
+            <div class="terminal-body">
+               <div class="terminal-line">
+                  <span class="prompt">$</span>
+                  <span class="command">ls -la posts/</span>
+               </div>
+               <div class="terminal-line">
+                  <span class="terminal-output">total 0</span>
+               </div>
+               <div class="terminal-line">
+                  <span class="terminal-output">drwxr-xr-x  2 jeremiah  staff   64 Jan 15 10:00 .</span>
+               </div>
+               <div class="terminal-line">
+                  <span class="terminal-output">drwxr-xr-x  5 jeremiah  staff  160 Jan 15 10:00 ..</span>
+               </div>
+               <div class="terminal-line coming-soon-line">
+                  <span class="prompt">$</span>
+                  <span class="command">echo "New posts coming soon!"</span>
+               </div>
+               <div class="terminal-line">
+                  <span class="terminal-output coming-soon-text">New posts coming soon!</span>
+               </div>
+            </div>
+         </div>
+
+         <div class="hero-content">
+            <h1 class="blog-title">Blog</h1>
+            <p class="blog-subtitle">Insights on Full-Stack Development & Technology</p>
          </div>
       </div>
 
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#blog"><i class="icon-down-circle"></i></a>
-      </p>
+      <!-- Animated Background -->
+      <div class="animated-bg">
+         <div class="bg-grid"></div>
+      </div>
    </header>
 
-   <!-- Blog Section -->
-   <section id="blog">
+   <!-- Blog Content Section -->
+   <section id="blog-content">
       <div class="row">
          <div class="twelve columns">
-            <h1>Latest Posts</h1>
-            
-            <div class="blog-posts">
-               <!-- Blog posts will be dynamically loaded here -->
-               <article class="blog-post">
-                  <header class="post-header">
-                     <h2><a href="posts/welcome-to-my-blog.html">Welcome to My Blog</a></h2>
-                     <div class="post-meta">
-                        <time datetime="2024-01-15">January 15, 2024</time>
-                        <span class="tags">
-                           <a href="#" class="tag">Personal</a>
-                           <a href="#" class="tag">Web Development</a>
-                        </span>
-                     </div>
-                  </header>
-                  <div class="post-excerpt">
-                     <p>Welcome to my new blog! I'm excited to share my thoughts on software development, technology trends, and lessons learned throughout my career journey...</p>
-                  </div>
-                  <footer class="post-footer">
-                     <a href="posts/welcome-to-my-blog.html" class="read-more">Read More →</a>
-                  </footer>
-               </article>
-
-               <article class="blog-post">
-                  <header class="post-header">
-                     <h2><a href="posts/learning-new-technologies.html">Staying Current: Learning New Technologies</a></h2>
-                     <div class="post-meta">
-                        <time datetime="2024-01-10">January 10, 2024</time>
-                        <span class="tags">
-                           <a href="#" class="tag">Learning</a>
-                           <a href="#" class="tag">Career</a>
-                        </span>
-                     </div>
-                  </header>
-                  <div class="post-excerpt">
-                     <p>The technology landscape evolves rapidly. Here's my approach to continuously learning new technologies while maintaining expertise in current ones...</p>
-                  </div>
-                  <footer class="post-footer">
-                     <a href="posts/learning-new-technologies.html" class="read-more">Read More →</a>
-                  </footer>
-               </article>
-            </div>
-
-            <div class="pagination">
-               <!-- Pagination will go here for larger blogs -->
+            <div class="coming-soon-container">
+               <div class="coming-soon-icon">
+                  <i class="fa fa-rocket"></i>
+               </div>
+               <h2>New Content Coming Soon!</h2>
+               <p>I'm currently working on some exciting articles about full-stack development, modern web technologies, and lessons learned from freelance projects.</p>
+               <p>Stay tuned for in-depth tutorials, best practices, and insights from the world of software development.</p>
+               
+               <div class="subscribe-section">
+                  <h3>Get Notified</h3>
+                  <p>Want to know when new posts are published?</p>
+                  <a href="../contact.html" class="cta-primary">Get in Touch</a>
+               </div>
             </div>
          </div>
       </div>
@@ -108,28 +129,32 @@
       <div class="row">
          <div class="twelve columns">
             <ul class="social-links">
-               <li><a href="https://linkedin.com/in/jeremiahcsmith1" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://github.com/jeremiahcsmith1" target="_blank"><i class="fa fa-github"></i></a></li>
-               <li><a href="https://www.strava.com/athletes/57565397" target="_blank"><i class="fa fa-bicycle"></i></a></li>
+               <li><a href="https://github.com/jeremiahsmithdev" target="_blank"><i class="fa fa-github"></i></a></li>
+               <li><a href="https://linkedin.com/in/jeremiahsmithdev" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+               <li>
+                  <a href="https://www.strava.com/athletes/jeremiahsmith" target="_blank">
+                     <svg class="strava-icon-footer" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/>
+                     </svg>
+                  </a>
+               </li>
             </ul>
 
             <ul class="copyright">
                <li>&copy; Copyright 2024 Jeremiah Smith</li>
-               <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
             </ul>
          </div>
 
-         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#blog-header"><i class="icon-up-open"></i></a></div>
       </div>
    </footer>
 
-   <!-- Java Script -->
+   <!-- Scripts -->
    <script src="../js/jquery-1.10.2.min.js"></script>
    <script src="../js/jquery-migrate-1.2.1.min.js"></script>
-   <script src="../js/jquery.flexslider.js"></script>
    <script src="../js/waypoints.js"></script>
    <script src="../js/jquery.fittext.js"></script>
-   <script src="../js/magnific-popup.js"></script>
    <script src="../js/init.js"></script>
+   <script src="../js/modern-home.js"></script>
 </body>
 </html>
